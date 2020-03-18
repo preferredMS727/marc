@@ -119,7 +119,7 @@ export class DatasheetComponent implements OnInit {
   }
 
   goDatasheetDetail(id: string) {
-    this.router.navigateByUrl('datasheet/detail/' + id);
+    this.router.navigateByUrl('landing/datasheet/detail/' + id);
   }
 
 }

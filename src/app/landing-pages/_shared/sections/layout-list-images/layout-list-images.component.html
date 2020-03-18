@@ -39,5 +39,5 @@
       </div>
     </div>
   </ul>
-  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  <pagination-controls *ngIf="pagination" (pageChange)="p = $event"></pagination-controls>
 </section>

@@ -10,11 +10,11 @@ declare const $: any;
 export class NavbarComponent implements OnInit {
 
   menuItems = [
-    { title: 'HOME', path: '/home' },
-    { title: 'INSPIRATION', path: '/inspiration' },
-    { title: 'BLOG', path: '/blog' },
-    { title: 'DATA SHEET', path: '/datasheet' },
-    { title: 'LOGIN/REGISTER', path: '/auth' },
+    { title: 'HOME', path: 'home' },
+    { title: 'INSPIRATION', path: 'inspiration' },
+    { title: 'BLOG', path: 'blog' },
+    { title: 'DATA SHEET', path: 'datasheet' },
+    { title: 'LOGIN/REGISTER', path: 'auth' },
   ]
   constructor(
     private router: Router
@@ -47,6 +47,7 @@ export class NavbarComponent implements OnInit {
   }
 
   goUrl(url: string): void {
+    console.log(url)
     this.router.navigateByUrl(url);
   }
 

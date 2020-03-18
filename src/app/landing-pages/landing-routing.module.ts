@@ -4,18 +4,12 @@ import { HomeComponent } from './home/home.component';
 import { LandingPagesComponent } from './landing-pages.component';
 
 const routes: Routes = [
-  // {
-  //   path: '',
-  //   pathMatch: 'full',
-  //   redirectTo: 'landing/home'
-  // },
   {
     path: '',
     component: LandingPagesComponent,
     children: [
       {
         path: 'home',
-        component: HomeComponent,
         loadChildren: () => import('./home/home.component.module').then(m => m.HomeModule),
       },
       {
@@ -37,12 +31,9 @@ const routes: Routes = [
       {
         path: 'auth',
         loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule),
-      },
-      {path: '', redirectTo: 'home', pathMatch: 'full'},
-      {path: '**', redirectTo: 'home'},
+      }
     ]
   },
-  // {path: '**', redirectTo: 'landing/home', pathMatch: 'full'},
 ];
 
 @NgModule({

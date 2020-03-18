@@ -30,6 +30,6 @@ export class BlogPostComponent implements OnInit {
   }
 
   goBlogDetail(id: string) {
-    this.router.navigateByUrl('blog/detail/' + id);
+    this.router.navigateByUrl('landing/blog/detail/' + id);
   }
 }

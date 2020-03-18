@@ -50,8 +50,8 @@ const routes: Routes = [
       },
     ],
   },
-  { path: '', redirectTo: 'landing', pathMatch: 'full' },
-  { path: '**', redirectTo: '' },
+  { path: '', redirectTo: 'landing/home', pathMatch: 'full' },
+  // { path: '**', redirectTo: '' },
 ];
 
 const config: ExtraOptions = {

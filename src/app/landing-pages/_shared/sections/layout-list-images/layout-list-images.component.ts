@@ -16,161 +16,8 @@ declare const $: any;
 export class LayoutListImagesComponent implements OnInit {
   @Input() title?: string;
   @Input() btnLink?: string;
-
-  allLayoutList: Layout[] = [
-    {
-      id: '1',
-      title: 'test1',
-      description: 'test1_description',
-      createdAt: new Date(),
-      user: {
-        id: '1',
-        username: 'tester1',
-        firstName: 'tester1_firstname',
-        middleName: 'tester1_middlename',
-        lastName: 'tester1_lastname',
-        mobile: '+123123123',
-        email: 'tester1@marc.com',
-      },
-      layoutType: {
-        id: '1',
-        name: 'x.style',
-      }
-    },
-    {
-      id: '2',
-      title: 'test2',
-      description: 'test2_description',
-      createdAt: new Date(),
-      user: {
-        id: '2',
-        username: 'tester2',
-        firstName: 'tester2_firstname',
-        middleName: 'tester2_middlename',
-        lastName: 'tester2_lastname',
-        mobile: '+223223223',
-        email: 'tester2@marc.com',
-      },
-      layoutType: {
-        id: '2',
-        name: 'x.style',
-      }
-    },
-    {
-      id: '1',
-      title: 'test1',
-      description: 'test1_description',
-      createdAt: new Date(),
-      user: {
-        id: '1',
-        username: 'tester1',
-        firstName: 'tester1_firstname',
-        middleName: 'tester1_middlename',
-        lastName: 'tester1_lastname',
-        mobile: '+123123123',
-        email: 'tester1@marc.com',
-      },
-      layoutType: {
-        id: '1',
-        name: 'x.style',
-      }
-    },
-    {
-      id: '3',
-      title: 'test2',
-      description: 'test2_description',
-      createdAt: new Date(),
-      user: {
-        id: '2',
-        username: 'tester2',
-        firstName: 'tester2_firstname',
-        middleName: 'tester2_middlename',
-        lastName: 'tester2_lastname',
-        mobile: '+223223223',
-        email: 'tester2@marc.com',
-      },
-      layoutType: {
-        id: '2',
-        name: 'x.style',
-      }
-    },
-    {
-      id: '1',
-      title: 'test1',
-      description: 'test1_description',
-      createdAt: new Date(),
-      user: {
-        id: '1',
-        username: 'tester1',
-        firstName: 'tester1_firstname',
-        middleName: 'tester1_middlename',
-        lastName: 'tester1_lastname',
-        mobile: '+123123123',
-        email: 'tester1@marc.com',
-      },
-      layoutType: {
-        id: '1',
-        name: 'x.style',
-      }
-    },
-    {
-      id: '2',
-      title: 'test2',
-      description: 'test2_description',
-      createdAt: new Date(),
-      user: {
-        id: '2',
-        username: 'tester2',
-        firstName: 'tester2_firstname',
-        middleName: 'tester2_middlename',
-        lastName: 'tester2_lastname',
-        mobile: '+223223223',
-        email: 'tester2@marc.com',
-      },
-      layoutType: {
-        id: '2',
-        name: 'x.style',
-      }
-    },
-    {
-      id: '1',
-      title: 'test1',
-      description: 'test1_description',
-      createdAt: new Date(),
-      user: {
-        id: '1',
-        username: 'tester1',
-        firstName: 'tester1_firstname',
-        middleName: 'tester1_middlename',
-        lastName: 'tester1_lastname',
-        mobile: '+123123123',
-        email: 'tester1@marc.com',
-      },
-      layoutType: {
-        id: '1',
-        name: 'x.style',
-      }
-    },
-    {
-      id: '3',
-      title: 'test2',
-      description: 'test2_description',
-      createdAt: new Date(),
-      user: {
-        id: '2',
-        username: 'tester2',
-        firstName: 'tester2_firstname',
-        middleName: 'tester2_middlename',
-        lastName: 'tester2_lastname',
-        mobile: '+223223223',
-        email: 'tester2@marc.com',
-      },
-      layoutType: {
-        id: '2',
-        name: 'x.style',
-      }
-    },
-  ];
+  @Input() pagination?: boolean;
+  @Input('data') allLayoutList: any;
 
   collection = [
     { id: '0', name: 'all' },
@@ -198,6 +45,7 @@ export class LayoutListImagesComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    console.log('this is layout list: ', this.title, this.btnLink, this.pagination, this.allLayoutList)
     $(document).ready(() => {
       this.initialize();
     });
@@ -248,7 +96,7 @@ export class LayoutListImagesComponent implements OnInit {
   }
 
   goDetailLayout(id: string) {
-    this.router.navigateByUrl('inspiration/detail/' + id);
+    this.router.navigateByUrl('landing/inspiration/detail/' + id);
   }
 
 }
