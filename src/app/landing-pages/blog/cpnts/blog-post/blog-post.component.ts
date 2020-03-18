@@ -23,7 +23,7 @@ export class BlogPostComponent implements OnInit {
   ngAfterViewInit() {
     $('.post-entry').readmore({
       speed: 75,
-      collapsedHeight: 125,
+      collapsedHeight: 120,
       moreLink: '<a class="more-link" href="#">Read more</a>',
       lessLink: '<a class="less-link" href="#">Read less</a>'
     });

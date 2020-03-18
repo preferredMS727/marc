@@ -9,6 +9,11 @@ declare const $: any;
 })
 export class DatasheetDetailComponent implements OnInit {
 
+  containItems = [
+    {id: '1', workTitle: 'Corporate Identity', workDes: 'Illustration'},
+    {id: '2', workTitle: 'Corporate Identity', workDes: 'Illustration'},
+    {id: '3', workTitle: 'Corporate Identity', workDes: 'Illustration'},
+  ]
   constructor(
     private activatedRoute: ActivatedRoute
   ) {

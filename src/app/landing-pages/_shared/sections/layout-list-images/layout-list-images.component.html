@@ -1,12 +1,12 @@
 <section class="module pb-0" id="works">
   <div class="container">
     <div class="row">
-      <div class="col-sm-6 col-sm-offset-3">
+      <div class="col-sm-6 col-sm-auto" style="margin: auto;">
         <h2 class="module-title font-alt">{{ title }}</h2>
         <div class="module-subtitle font-serif"></div>
       </div>
-      <div class="col-sm-3">
-        <button class="btn btn-b btn-round" style="position: absolute; right: 0;" *ngIf="btnLink" (click)="createNewLayout()">Create New Layout</button>
+      <div class="col-sm-12"> 
+        <button class="btn btn-b btn-round" style="float: right;" *ngIf="btnLink" (click)="createNewLayout()">Create New Layout</button>
       </div>
     </div>
   </div>

@@ -11,6 +11,23 @@ export class SlideTextImageComponent implements OnInit {
   @ViewChild('section', { static: false }) section: ElementRef;
 
   @Input() backgroundImage?: string = 'assets/images/testimonial_bg.jpg';
+  slideData = [
+    {
+      testimonialText: 'I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.',
+      testimonialTitle: 'Jack Woods',
+      testimonialDescr: 'SomeCompany INC, CEO'
+    },
+    {
+      testimonialText: 'I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.',
+      testimonialTitle: 'Jack Woods',
+      testimonialDescr: 'SomeCompany INC, CEO'
+    },
+    {
+      testimonialText: 'I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.',
+      testimonialTitle: 'Jack Woods',
+      testimonialDescr: 'SomeCompany INC, CEO'
+    },
+  ]
 
   constructor(
     private renderer: Renderer2

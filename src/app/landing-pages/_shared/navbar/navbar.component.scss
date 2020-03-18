@@ -1,0 +1,228 @@
+// .navbar {
+//   background: #444;
+//   -o-transition: all .6s;
+//   -moz-transition: all .6s;
+//   -webkit-transition: all .6s;
+//   -ms-transition: all .6s;
+//   transition: all .6s;
+//   backface-visibility: hidden;
+// }
+
+// .navbar.navbar-no-bg {
+//   background: #444;
+//   background: rgba(0, 0, 0, 0.2);
+// }
+
+// .navbar-dark .navbar-nav {
+//   font-size: 15px;
+//   color: #fff;
+//   text-transform: uppercase;
+// }
+
+// .navbar-dark .navbar-nav .nav-link {
+//   color: #fff;
+//   color: rgba(255, 255, 255, 0.8);
+//   border: 0;
+// }
+
+// .navbar-dark .navbar-nav .nav-link:hover {
+//   color: #fff;
+// }
+
+// .navbar-dark .navbar-nav .nav-link:focus {
+//   color: #fff;
+//   outline: 0;
+// }
+
+// .navbar-expand-md .navbar-nav .nav-link {
+//   padding-left: 1rem;
+//   padding-right: 1rem;
+// }
+
+// .navbar-brand {
+//   width: 105px;
+//   // background: url(../img/logo.png) left center no-repeat;
+//   border: 0;
+//   text-indent: -99999px;
+// }
+
+// @media (min-width: 768px) and (max-width: 991px) {
+ 
+//   .navbar-expand-md .navbar-nav .nav-link { padding-left: 0.6rem; padding-right: 0.6rem; }
+
+//   /* ... */
+
+// }
+
+// @media (max-width: 767px) {
+
+//   .navbar.navbar-no-bg { background: #444; }
+//   .navbar-dark .navbar-toggler { border-color: #444; }
+//   .navbar-dark .navbar-toggler:focus { background: #333; outline: 0; }
+//   .navbar-expand-md .navbar-nav .nav-link { padding-top: 0.3rem; padding-bottom: 0.3rem; }
+
+//   /* ... */
+
+// }
+
+// @media
+// only screen and (-webkit-min-device-pixel-ratio: 2),
+// only screen and (   min--moz-device-pixel-ratio: 2),
+// only screen and (     -o-min-device-pixel-ratio: 2/1),
+// only screen and (        min-device-pixel-ratio: 2),
+// only screen and (                min-resolution: 192dpi),
+// only screen and (                min-resolution: 2dppx) {
+ 
+//     /* logo */
+//     .navbar-brand {
+//         // background-image: url(../img/logo@2x.png) !important;
+//         background-repeat: no-repeat !important;
+//         background-size: 105px 33px !important;
+//     }
+ 
+// }
+
+
+/* RESET RULES & HELPER CLASSES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+::ng-deep {
+  :root {
+    --lightblue: #f6f9fc;
+    --black: black;
+  }
+}
+
+a,
+a:hover {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.bg-lightblue {
+  background: var(--lightblue);
+}
+
+.bg-red {
+  background: var(--black);
+}
+
+.text-red {
+  color: var(--black);
+}
+
+.container-fluid-max {
+  max-width: 1440px;
+}
+
+.cover {
+  background: no-repeat center/cover;
+}
+
+.p-15 {
+  padding: 15px;
+}
+
+/* SCROLL ANIMATIONS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.scroll .page-header {
+  background: var(--black);
+}
+
+header.scroll {
+  background: var(--black);
+}
+
+.scroll .hero {
+  transform: scale(0.98);
+}
+
+/* HEADER
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.page-header {
+  transition: background 0.5s ease-in-out;
+}
+
+.page-header .navbar {
+  padding: 1rem 0;
+}
+
+.page-header .navbar-toggler {
+  /* the variable is inherited from BS4 built-in variables */
+  border-color: var(--white); 
+}
+
+/* BANNER SECTION
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.hero {
+  background-attachment: fixed;
+  transition: transform 0.5s ease-in-out;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.5) 0,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+}
+
+.hero .container-fluid {
+  z-index: 10;
+}
+
+/* POPULAR DESTINATIONS SECTION
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.popular-destinations figure {
+  margin-bottom: 30px;
+}
+
+.popular-destinations figcaption {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.popular-destinations img {
+  filter: grayscale(100%) blur(3px);
+  transition: transform 0.5s, filter 0.75s;
+}
+
+.popular-destinations a:hover img {
+  transform: scale(1.25);
+  filter: none;
+}
+
+/* PAGE FOOTER
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.page-footer .footer-links {
+  text-align: right;
+}
+
+/* MEDIA QUERIES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* MEDIUM SCREENS */
+@media screen and (max-width: 991px) {
+  .page-header {
+    background: var(--black);
+  }
+}
+
+/* SMALL SCREENS */
+@media screen and (max-width: 767px) {
+  .page-footer .footer-child {
+    text-align: center;
+  }
+}

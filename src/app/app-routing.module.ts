@@ -8,14 +8,16 @@ import {
   NbRequestPasswordComponent,
   NbResetPasswordComponent,
 } from '@nebular/auth';
+import { LandingPagesComponent } from './landing-pages/landing-pages.component';
 
 const routes: Routes = [
   {
     path: 'landing',
+    // component: LandingPagesComponent,
     loadChildren: () => import('./landing-pages/landing-pages.module').then(m => m.LandingPagesModule),
   },
   {
-    path: 'pages',
+    path: 'admin',
     loadChildren: () => import('./admin-pages/pages.module').then(m => m.PagesModule),
   },
   {
@@ -48,8 +50,8 @@ const routes: Routes = [
       },
     ],
   },
-  { path: '', redirectTo: 'pages', pathMatch: 'full' },
-  { path: '**', redirectTo: 'pages' },
+  { path: '', redirectTo: 'landing', pathMatch: 'full' },
+  { path: '**', redirectTo: '' },
 ];
 
 const config: ExtraOptions = {

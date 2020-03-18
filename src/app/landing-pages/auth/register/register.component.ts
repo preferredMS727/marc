@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { ConfirmPasswordValidator } from './confirm-password.validator';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -12,7 +13,8 @@ export class RegisterComponent implements OnInit {
   loading = false;
 
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -65,6 +67,8 @@ export class RegisterComponent implements OnInit {
     }
 
     this.loading = true;
+    
+    this.router.navigateByUrl('admin');
   }
 
   isControlHasError(controlName: string, validationType: string): boolean {

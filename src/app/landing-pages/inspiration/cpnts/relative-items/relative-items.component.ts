@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RelativeItemsComponent implements OnInit {
 
+  relativeProjects = [
+    {id: '1', workTitle: 'Corporate Identity', workDescription: 'Illustration'},
+    {id: '2', workTitle: 'Corporate Identity', workDescription: 'Illustration'},
+    {id: '3', workTitle: 'Corporate Identity', workDescription: 'Illustration'},
+  ]
   constructor() { }
 
   ngOnInit() {

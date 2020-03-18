@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, ControlContainer } from '@angular/forms';
+import { Router } from '@angular/router';
 
 const DEMO_PARAMS = {
 	EMAIL: 'admin@marc.com',
@@ -18,6 +19,7 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -49,8 +51,9 @@ export class LoginComponent implements OnInit {
     }
 
     this.loading = true;
-    console.log('this is authData: ', this.loginForm.value)
+    console.log('this is authData: ', this.loginForm.value);
 
+    this.router.navigateByUrl('admin');
   }
 
   isControlHasError(controlName: string, validationType: string): boolean {
